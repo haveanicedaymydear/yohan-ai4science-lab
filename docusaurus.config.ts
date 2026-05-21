@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Yohan AI for Science Lab',
-  tagline: 'Deep Learning, AI for Science, Paper Reproduction and Research Notes',
+  title: 'Yohan AI4Sci Lab',
+  tagline: 'Deep Learning · AI for Science · Paper Reproduction · Research Notes',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
