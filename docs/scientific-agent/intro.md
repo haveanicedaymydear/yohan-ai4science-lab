@@ -1,16 +1,24 @@
 ---
-title: Scientific Agent
+title: Scientific Agent Notes
 sidebar_position: 1
 ---
 
-# Scientific Agent
+# Scientific Agent Notes
 
-This section records notes about AI agents for scientific research workflows.
+This section tracks my understanding of scientific agents: systems that can assist with literature search, hypothesis organization, experiment planning, tool use, and result logging.
 
-## Learning Scope
+## Technical Summary
 
-- Literature search agents
-- Experiment planning agents
-- Code and data analysis agents
-- Tool use and workflow orchestration
-- Evaluation and reliability
+A scientific agent is not only a chatbot. In a research workflow, it may need to read documents, call tools, inspect code output, write experiment logs, and help connect observations to next actions.
+
+## What I Learned
+
+The core challenge is reliable workflow support: defining tasks clearly, using tools safely, checking outputs, and keeping records traceable.
+
+## Current Limitations
+
+My current understanding is conceptual. I still need more hands-on examples that combine agents with real scientific tools and datasets.
+
+## Next Learning Steps
+
+I will study tool-using agents, retrieval workflows, experiment planning, and evaluation methods for scientific assistant systems.

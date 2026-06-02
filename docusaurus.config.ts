@@ -3,8 +3,9 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Yohan AI4Sci Lab',
-  tagline: 'AI for Science · Deep Learning · Paper Reading · Code Reproduction',
+  title: 'Yohan Lab',
+  tagline:
+    'A personal learning portfolio documenting my preparation in machine learning, deep learning, AI for Science, and reproducible research workflows.',
   favicon: 'img/favicon.ico',
 
   future: {
@@ -57,7 +58,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Notes',
+          label: 'Portfolio',
         },
         {
           href: 'https://github.com/haveanicedaymydear/yohan-ai4science-lab',
@@ -72,52 +73,28 @@ const config: Config = {
         {
           title: 'Yohan Lab',
           items: [
-            {
-              label: 'Learning Notes',
-              to: '/docs/intro',
-            },
-            {
-              label: 'AI for Science',
-              to: '/docs/ai-for-science/intro',
-            },
-            {
-              label: 'Deep Learning',
-              to: '/docs/deep-learning/intro',
-            },
+            { label: 'Introduction', to: '/docs/intro' },
+            { label: 'AI Foundations', to: '/docs/deep-learning/deep-learning-and-classical-ml-map' },
+            { label: 'AI for Science Notes', to: '/docs/ai-for-science/intro' },
           ],
         },
         {
           title: 'Research Workflow',
           items: [
-            {
-              label: 'Paper Reading',
-              to: '/docs/paper-reading/intro',
-            },
-            {
-              label: 'Code Reproduction',
-              to: '/docs/reproduction/intro',
-            },
-            {
-              label: 'Projects',
-              to: '/docs/projects/intro',
-            },
+            { label: 'Reproducible Research', to: '/docs/reproduction/diffdock-minimal-reproduction-log' },
+            { label: 'Paper Reading', to: '/docs/paper-reading/template' },
+            { label: 'Projects', to: '/docs/projects/intro' },
           ],
         },
         {
           title: 'More',
           items: [
-            {
-              label: 'Scientific Agent',
-              to: '/docs/scientific-agent/intro',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/haveanicedaymydear/yohan-ai4science-lab',
-            },
+            { label: 'Scientific Agent Notes', to: '/docs/scientific-agent/intro' },
+            { label: 'GitHub', href: 'https://github.com/haveanicedaymydear/yohan-ai4science-lab' },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Yohan Lab. Built as a personal AI for Science learning archive.`,
+      copyright: `Copyright (c) ${new Date().getFullYear()} Yohan Lab. Personal AI learning portfolio.`,
     },
     prism: {
       theme: prismThemes.github,

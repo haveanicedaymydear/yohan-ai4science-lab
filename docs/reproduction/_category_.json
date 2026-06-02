@@ -1,8 +1,8 @@
 {
-  "label": "Code Reproduction",
-  "position": 7,
+  "label": "Reproducible Research",
+  "position": 4,
   "link": {
     "type": "doc",
-    "id": "reproduction/intro"
+    "id": "reproduction/template"
   }
 }

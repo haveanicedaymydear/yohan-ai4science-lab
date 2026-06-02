@@ -1,6 +1,6 @@
 {
-  "label": "Deep Learning",
-  "position": 3,
+  "label": "AI Foundations",
+  "position": 2,
   "link": {
     "type": "doc",
     "id": "deep-learning/intro"

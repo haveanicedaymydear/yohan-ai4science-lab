@@ -1,6 +1,6 @@
 {
-  "label": "Scientific Agent",
-  "position": 4,
+  "label": "Scientific Agent Notes",
+  "position": 5,
   "link": {
     "type": "doc",
     "id": "scientific-agent/intro"

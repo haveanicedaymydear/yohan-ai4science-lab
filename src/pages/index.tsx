@@ -21,7 +21,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/intro">
-            Enter Yohan Lab Notes
+            Open Portfolio
           </Link>
         </div>
       </div>
@@ -32,8 +32,8 @@ function HomepageHeader() {
 export default function Home(): ReactNode {
   return (
     <Layout
-      title="Yohan AI4Sci Lab"
-      description="Yohan Lab records learning notes, paper reading, code reproduction, and projects for AI for Science.">
+      title="Yohan Lab"
+      description="A personal learning portfolio documenting machine learning, deep learning, AI for Science, and reproducible research workflows.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

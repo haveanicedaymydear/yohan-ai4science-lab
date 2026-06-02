@@ -1,57 +1,67 @@
 ---
-title: 论文阅读模板
+title: Paper Reading Template
 sidebar_position: 1
 ---
 
-# 论文阅读模板
+# Paper Reading Template
 
-## 1. 基本信息
+This template helps me read papers in a structured way and connect each paper to possible reproduction work.
 
-- 论文标题：
-- 作者：
-- 会议 / 期刊：
-- 年份：
-- 代码链接：
-- 数据集：
+## Basic Information
 
-## 2. 这篇论文解决什么问题？
+- Paper title:
+- Authors:
+- Venue:
+- Year:
+- Repository:
+- Dataset:
 
-用自己的话解释论文的问题背景。
+## Problem Setting
 
-## 3. 输入和输出是什么？
+Summarize the scientific or technical problem in my own words.
 
-- 输入：
-- 输出：
+## Input and Output
 
-## 4. 核心方法
+- Input:
+- Output:
+- Prediction or generation target:
+- Evaluation setting:
 
-简要解释模型结构、算法流程或关键思想。
+## Method
 
-## 5. 数据集与评价指标
+Describe the model architecture, algorithm, training procedure, or workflow.
+
+## Dataset and Metrics
 
 - Dataset:
 - Metrics:
 - Baselines:
+- Main comparison:
 
-## 6. 实验结果
+## Results
 
-记录主要结果，以及和 baseline 的比较。
+Record the main results and how they compare with baselines.
 
-## 7. 消融实验
+## Limitations
 
-这篇论文证明了哪些模块是有效的？
+Identify what the paper does not solve, what assumptions it makes, and what might be difficult to reproduce.
 
-## 8. 局限性
+## Reproduction Notes
 
-这篇论文还有哪些问题？
+- Required environment:
+- Required inputs:
+- Expected outputs:
+- Possible blockers:
+- Minimal reproduction target:
 
-## 9. 我的理解
+## What I Learned
 
-用自己的语言总结这篇论文真正有价值的地方。
+Summarize the most important idea I learned from the paper.
 
-## 10. 如果我要复现
+## Current Limitations
 
-- 第一步：
-- 需要的数据：
-- 需要的环境：
-- 可能的难点：
+State what I still do not fully understand or have not implemented.
+
+## Next Learning Steps
+
+List follow-up reading, implementation, or reproduction tasks.

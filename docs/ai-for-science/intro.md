@@ -1,136 +1,49 @@
 ---
-title: AI for Science 入门知识地图
+title: AI for Science Knowledge Map
 sidebar_position: 1
 ---
 
-# AI for Science 入门知识地图
+# AI for Science Knowledge Map
 
-*从科学问题到可建模任务｜Yohan Lab C级学习笔记*
+This note is my current knowledge map for AI for Science. It helps me understand how scientific questions can be translated into machine learning tasks and how models, data, evaluation, and reproducible workflows connect.
 
-> 本文目标：把 AI4S 的核心概念整理成可面试表达、可上传 Yohan Lab、可继续进入实操复现的知识地图。
+At this stage, my goal is to understand how scientific questions are translated into AI tasks, including task definition, input-output formulation, model selection, evaluation, and reproducible experimentation.
 
-这篇笔记记录我从通用机器学习进入 AI for Science 语境后的第一层理解。它不追求百科式完整，而追求一个更重要的能力：把复杂科学问题识别为可建模、可计算、可验证、可迭代的 AI 任务。
+## What AI for Science Means To Me
 
-我当前的定位不是生物医学专家，也不是已经成熟的 AI4S 研究员，而是 AI/CS 侧的科研转译者：能把领域专家提出的问题拆成任务定义、输入输出、数据格式、模型选择、评估指标和实验流程。
+AI for Science uses AI methods to support scientific discovery, simulation, prediction, and research workflows. It is not only about applying a model to a dataset. It also requires understanding the scientific object, the representation, the task boundary, and the reliability of the output.
 
-## 1. AI for Science：从传统科学问题到 AI 可建模任务
+Examples include protein structure prediction, molecular docking, molecular property prediction, materials discovery, climate modeling, scientific simulation, and automated research workflows.
 
-AI for Science 不是让 AI 简单总结论文，也不是用大模型替代科学家。它的核心是让 AI 进入科学研究流程：建模、预测、搜索、模拟、实验设计、结果分析和假设迭代。
+## Task Translation
 
-传统科学方法并没有失效。牛顿、开普勒、统计物理、量子化学和数值模拟仍然是科学解释的根基。AI4S 出现的原因，是许多真实科学系统具有高维、多体、多尺度、强噪声和巨大搜索空间，单纯依靠手工推导、暴力枚举或高成本实验效率太低。AI 的作用，是在这些复杂空间中学习规律、压缩搜索、提出候选并加速验证。
+```text
+Scientific question
+-> data representation
+-> input-output definition
+-> model family
+-> evaluation metric
+-> reproducible experiment
+```
 
-> 第一性原理：AI4S 不是否定传统科学，而是在复杂系统中用学习方法加速建模、搜索和验证。
+For example, a protein-ligand binding question can become inputs such as a protein structure and a ligand SMILES string, then outputs such as candidate binding poses, confidence scores, affinity estimates, or ranked molecules.
 
-因此，AI4S 的基本转化链条是：科学问题 → 数据表示 → 模型结构 → 训练目标 → 评价指标 → 实验验证 → 下一轮假设。只要能完成这个转化，AI 就不再只是信息工具，而开始成为科学流程的一部分。
+## Model Families
 
-## 2. World Model：让 AI 具备 What-if 推演能力
+Graph Neural Networks are important because molecules, materials, and biological interactions can often be represented as graphs. Diffusion models are useful for generative tasks and structure generation. Transformers and foundation models are useful for sequence, structure, and multimodal scientific data. Scientific agents may support research workflows by reading papers, organizing hypotheses, running tools, checking outputs, and writing experiment logs.
 
-World Model 的核心不是“预测现实世界”这么窄，而是学习一个系统的状态表示和动态变化规律。这个系统可以是机器人环境、分子系统、材料结构、物理仿真，也可以是一个抽象实验流程。
+## Reproducible Workflow
 
-一个世界模型通常需要完成两件事：第一，把复杂观测压缩成关键状态表示；第二，学习这些状态在不同条件或动作下如何演化。这样 AI 才能在内部进行 what-if 推演：如果条件改变，系统下一步会怎样？
+A useful reproduction record should include the scientific task, model or tool, input files, environment setup, errors and fixes, generated outputs, result inspection, and current limitations.
 
-JEPA 一类思想强调，不必预测所有像素或所有表面细节，而是学习更抽象、更稳定、更可预测的潜在表示。这个方向让我意识到，智能不是记住每个细节，而是压缩出真正影响未来的关键变量。
+## What I Learned
 
-> 面试表达：World Model 的价值在于让 AI 不只识别当前状态，而是理解状态如何演化，并在内部进行假设推演和规划。
+AI for Science requires both modeling knowledge and workflow discipline. The important step is learning how to translate a scientific problem into a clear computational task and then document the experiment honestly.
 
-## 3. Scientific Agent：不是单个模型，而是科研工作流系统
+## Current Limitations
 
-Scientific Agent 不是某一个模型的名字，也不是简单的聊天机器人。它是一种面向科研任务的工作流系统：以 LLM 作为认知与语言接口，同时连接文献库、数据库、API、代码环境、模拟器和实验记录工具。
+My current understanding is still introductory. I do not yet claim domain expertise in biology, chemistry, materials science, or clinical research. I am building the ability to read tasks, understand representations, run code, and document reproducible workflows.
 
-普通 LLM 可以帮助阅读论文、解释概念、生成代码片段；Scientific Agent 更进一步，它要把复杂科研问题拆成步骤：检索文献、提取问题定义、寻找代码仓库、配置环境、运行最小实验、分析结果、记录失败原因，并提出下一步计划。
+## Next Learning Steps
 
-因此，Scientific Agent 的关键不是“AI 会不会回答问题”，而是“AI 能不能组织科研过程”。它的理想形态不是替代研究者，而是在人类监督下把科研任务变得更结构化、更连续、更可复现。
-
-> 核心定义：Scientific Agent 是面向科研任务的工作流系统，而不是单个大语言模型。
-
-## 4. Research Automation：让科研过程可追踪、可复现、可迭代
-
-Research Automation 的价值不只是节省时间。更深层的意义，是把科研过程结构化记录下来，使文献调研、代码复现、实验参数、运行命令、错误日志、指标结果和报告生成都能被追踪、比较和复现。
-
-一次实验如果只停留在“我跑过了”，价值非常有限。真正有价值的记录应包括：研究问题是什么，假设是什么，输入输出是什么，使用了哪个代码版本，环境如何配置，运行命令是什么，参数如何设置，指标结果如何，失败原因是什么，下一步如何修改。
-
-我目前搭建的 Yohan Lab 是一个轻量级 human-in-the-loop research automation workflow：学习资料输入 → 概念整理 → 文档生成 → Git 版本管理 → 网站发布 → 复习与面试表达。它还不是完整科研自动化系统，但已经开始训练我把学习和实验过程变成可追踪的研究资产。
-
-> 面试表达：Research Automation 的核心价值不是简单提效，而是让科研流程可追踪、可复现、可迭代。
-
-## 5. 蛋白质结构预测：从序列到结构
-
-Protein Structure Prediction 的任务，是根据氨基酸序列预测蛋白质三维结构。它背后的科学逻辑是：序列影响结构，结构影响功能。如果能从序列可靠预测结构，就能大幅提高生命科学研究和药物发现的效率。
-
-AlphaFold 是这一方向的代表性系统。它展示了深度学习可以处理真实科学建模问题，而不只是做图像分类或文本生成。对我而言，AlphaFold 的意义不仅是“预测蛋白结构”，更是证明 AI 可以进入传统科学最核心的建模区域。
-
-RoseTTAFold 同样属于蛋白结构预测方向的重要代表。短期内我不需要完整复现这类重系统，但必须理解它们的任务定义：输入通常是蛋白序列及相关进化信息，输出是三维结构及可信度评估。
-
-> 第一层理解：Protein Structure Prediction 是 AI4S 中“科学对象如何从序列表示进入结构建模”的代表任务。
-
-## 6. Molecular Docking 与 DiffDock：从候选分子到结合姿态
-
-Molecular Docking 关注的是小分子 ligand 如何与蛋白质 target 结合。它在药物发现中非常关键，因为候选分子是否可能与靶点结合，直接影响后续筛选、优化和实验验证。
-
-这一任务的典型输入是蛋白结构与小分子表示，输出是可能的结合姿态、构象或置信度评分。传统 docking 工具依赖搜索和打分函数，而 DiffDock 代表了生成式方法进入分子对接任务的方向：它把 docking pose 的预测转化为生成问题，用扩散模型产生候选结合姿态，再用置信度模型进行排序。
-
-我计划把 DiffDock 作为第一个 AI4S 最小实操项目。目标不是训练大模型，而是先完成任务定义、README 阅读、输入输出识别、在线 demo 或本地 inference 尝试，并记录运行命令、报错、结果和理解，形成 paper-to-experiment log。
-
-> 实操定位：DiffDock 是我从 AI4S 概念进入药物发现最小复现的优先入口。
-
-## 7. GNN for Molecules：把化学结构变成关系表示
-
-GNN for Molecules 的第一性原理很清晰：分子天然可以表示成图。原子是节点，化学键是边，分子的性质不仅取决于单个原子，也取决于原子之间的连接方式和局部结构。
-
-图神经网络通过 message passing 让节点之间交换信息，从而把局部化学结构逐步编码成整个分子的表示。这个表示可以用于分子性质预测、毒性预测、活性预测、药物筛选或材料性质建模。
-
-对我来说，GNN for Molecules 是连接通用 GNN 知识和 AI4S 实操的关键桥梁。之后如果我做一个 mini project，可以从 SMILES 输入开始，将分子转换为 molecular graph，再用简单 GCN 或 GIN 做 graph-level prediction。
-
-> 关键句：GNN for Molecules 解决的是如何把化学结构转化为模型可学习的关系表示。
-
-## 8. Molecular Dynamics：从静态结构到动态演化
-
-Molecular Dynamics 关注的是原子和分子如何随时间运动。它不是只看一个静态结构，而是模拟系统在力场、能量景观和时间步推进下的动态轨迹。
-
-这一方向与 World Model 有天然连接。分子系统本质上是一个动态系统，科学家关心的不只是某一刻结构是什么，还关心在不同温度、力场、溶剂环境或扰动条件下，系统如何演化。
-
-AI 在这里的可能角色包括：加速昂贵仿真、学习 surrogate model、预测 trajectory、近似 force field 或辅助选择实验条件。短期内我需要先理解 force field、trajectory、time step 和 energy landscape 等基本概念，再考虑使用 OpenMM 等工具进行最小模拟。
-
-> 第一性原理：Molecular Dynamics 让 AI4S 从“预测静态结构”进一步走向“理解系统演化”。
-
-## 9. GNoME：材料发现中的生成、预测与验证闭环
-
-GNoME 是 AI for Materials Discovery 的代表性工作。它体现了 AI4S 在材料科学中的典型闭环：生成候选结构，预测稳定性，用计算方法验证，再把结果反馈给模型继续迭代。
-
-与蛋白和分子不同，材料发现面对的是晶体结构、组成元素、稳定性和物性预测等问题。GNoME 的意义在于，它展示了 AI 可以在巨大材料搜索空间中提出高价值候选，而不仅仅是被动分析已有数据。
-
-短期内我不需要复现 GNoME，但需要理解它在 AI4S 地图中的位置：它代表材料科学方向，证明图网络、候选生成和计算验证可以组合成科学发现流程。
-
-> 定位：GNoME 不是普通应用案例，而是 AI 加速材料发现的代表性系统。
-
-## 10. 与生医专家合作时，我能承担什么角色
-
-如果与生物医学方向专家合作，我不会把自己包装成领域专家。具体机制、靶点选择和实验意义需要由领域专家确认。但我可以承担 AI/CS 侧的转译工作：把专家提出的科学问题拆成任务定义、输入输出、数据格式、模型选择、评估指标和实验流程。
-
-例如，如果专家提出一个 protein-ligand binding 问题，我会先确认 target protein、candidate ligand、结构文件格式、任务目标和可用数据。随后判断应使用传统 docking 工具、DiffDock 类模型，还是先做文献调研和代码复现。如果问题是分子性质预测，我会考虑 SMILES 到 molecular graph 的转换，并用 GNN 做 graph-level prediction。如果问题涉及动态行为，我会进一步判断是否需要 Molecular Dynamics、trajectory 分析或 surrogate model。
-
-> 我的核心价值：不是替代生医专家，而是把专家问题转译成可执行的 AI pipeline。
-
-## 11. 当前阶段边界与下一步实操路线
-
-我当前仍处在 AI4S 入门阶段，最重要的不是假装已经精通所有代表性系统，而是明确每个方向的任务定义、输入输出、代表模型和最小实操入口。
-
-下一步我将把 C 级知识地图推进到 B/A 级实操闭环。第一，建立 Scientific Agent Workflow 页面，描述从论文到实验的 human-in-the-loop 流程。第二，建立 Experiment Log Template，使每个实验都能记录问题、输入、输出、环境、命令、指标、错误和下一步计划。第三，启动 DiffDock Minimal Reproduction Plan，从 README、demo、inference 和运行记录进入真正的 AI4S 实操。
-
-- 短期目标：完成 AI4S 12 个核心词的面试级表达。
-
-- 下一步实操：DiffDock minimal reproduction，记录输入、输出、命令、错误和结果。
-
-- 能力路线：从概念理解，进入文献阅读、代码复现、实验记录和报告生成。
-
-- 最终目标：形成从 scientific question 到 reproducible experiment 的最小科研闭环。
-
-## 12. 本阶段总结
-
-这张 C 级知识地图让我完成了从“普通 AI 模型学习”到“AI for Science 岗位语境”的第一次迁移。
-
-AI4S 的关键不在于背诵 AlphaFold、DiffDock、GNoME 这些名词，而在于理解它们背后的共同逻辑：科学问题如何被表示为数据，如何被模型学习，如何被实验验证，如何被记录并进入下一轮迭代。
-
-我当前最重要的训练方向，是把自己塑造成 AI/CS 侧的科研转译者：能理解领域专家的问题，能识别输入输出，能选择合适模型或工具，能推进代码复现，能记录实验过程，最终形成可追踪、可复现、可迭代的科研工作流。
-
-一句话总结：AI for Science 的起点不是“我知道很多模型”，而是“我能把一个科学问题转化为可执行、可验证、可记录的 AI 任务”。
+I will continue studying molecular docking, graph learning, protein models, scientific agents, and small reproducible experiments connected to real AI for Science tools.

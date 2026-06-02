@@ -1,8 +1,8 @@
 {
-  "label": "Paper Reading",
-  "position": 6,
+  "label": "Research Workflow",
+  "position": 5,
   "link": {
     "type": "doc",
-    "id": "paper-reading/intro"
+    "id": "paper-reading/template"
   }
 }

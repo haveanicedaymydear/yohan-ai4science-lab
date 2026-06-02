@@ -3,18 +3,16 @@ title: Introduction
 sidebar_position: 1
 ---
 
-# Yohan AI for Science Lab
+# Introduction
 
-Yohan Lab is my personal AI for Science learning archive.
+Yohan Lab is my personal AI learning portfolio.
 
-This website records my learning notes, paper reading logs, code reproduction process, and projects related to Deep Learning, AI for Science, Scientific Agents, Physical AI, and research systems.
+It documents my ongoing preparation in machine learning, deep learning, AI for Science, and reproducible research workflows. The purpose of this site is to keep my learning process structured, traceable, and technically accountable.
 
-## Main Sections
+Current focus areas:
 
-- AI for Science
-- Deep Learning
-- Scientific Agent
-- Physical AI
-- Paper Reading
-- Code Reproduction
-- Projects
+1. AI Foundations: classical machine learning, deep learning models, and model evaluation.
+2. AI for Science: understanding how scientific questions can be transformed into modelable tasks.
+3. Reproducible Research: reading papers, running code, debugging environments, inspecting outputs, and recording results.
+
+This site is not intended to present finished research claims. It is a structured record of my learning process, technical progress, and effort to build stronger AI foundations.

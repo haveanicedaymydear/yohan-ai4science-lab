@@ -11,32 +11,33 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'AI for Science Map',
+    title: 'AI Foundations',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Notes that turn scientific questions into modelable tasks, inputs,
-        outputs, evaluation criteria, and reproducible experiments.
+        Notes on classical machine learning, deep learning models, model
+        evaluation, and implementation fundamentals.
       </>
     ),
   },
   {
-    title: 'Learning Archive',
+    title: 'AI for Science Notes',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Deep learning, classical machine learning, paper reading, and code
-        reproduction are organized as a long-term research notebook.
+        Learning notes on how scientific questions can be transformed into
+        modelable tasks, including molecular docking, scientific agents, and
+        research workflows.
       </>
     ),
   },
   {
-    title: 'Research Workflow',
+    title: 'Reproduction Logs',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Yohan Lab keeps track of concepts, experiment logs, implementation
-        notes, and project ideas from question to reproducible result.
+        Records of code reproduction, environment debugging, inference
+        execution, output inspection, and experiment logging.
       </>
     ),
   },

@@ -1,240 +1,52 @@
 ---
-title: 深度学习与经典机器学习模型的第一性原理地图
-sidebar_position: 2
+title: Deep Learning and Classical Machine Learning Foundations
+sidebar_position: 1
 ---
 
-# 深度学习与经典机器学习模型的第一性原理地图
+# Deep Learning and Classical Machine Learning Foundations
 
-*Deep Learning · Classical Machine Learning · Model Thinking*
+This note is my first concept map for connecting classical machine learning and deep learning. I use it to clarify what different model families are designed to do, what kind of data structure they learn from, and how they may connect to future AI for Science projects.
 
-> 用途：面试准备 / Yohan Lab 知识沉淀 / 后续论文复现基础
+## AI, Machine Learning, and Deep Learning
 
-> 核心目标：不是罗列名词，而是理解每个模型为什么存在、解决什么数据结构问题、依靠什么机制工作、边界在哪里。
+Artificial intelligence is a broad field for building systems that can reason, predict, generate, decide, or act. Machine learning is one important part of AI: it allows models to learn patterns from data instead of relying only on hand-written rules.
 
-## 0. 本阶段总纲：先建立模型地图，再进入论文与代码
+Deep learning is a major branch of machine learning. It uses multi-layer neural networks to learn representations from data. In image recognition, a deep model may first learn edges, then textures, then object parts, and finally full object-level patterns.
 
-第一阶段的任务不是“背完所有算法”，而是建立判断框架：看到一个模型时，能判断它处理什么数据、依靠什么机制、适合什么问题、容易出现什么失效模式。
+## Three Learning Paradigms
 
-我将今天学习的内容压缩为三条主线：
+Supervised learning uses labeled examples. The model compares predictions with known answers and updates its parameters to reduce error. Typical tasks include classification, regression, spam detection, disease prediction, and price estimation.
 
-- 1. 数据结构主线：图像是空间网格，文本是序列，分子与关系系统是图，科学系统常常是动态演化过程。
+Unsupervised learning works without explicit labels. It tries to discover structure in data, such as clusters, low-dimensional representations, anomalies, or hidden groups.
 
-- 2. 模型机制主线：CNN 利用局部结构，RNN/GRU 处理序列记忆，Transformer 用注意力建模全局关系，ResNet 让深层网络学习残差，GAN 用对抗逼近真实分布，GNN 用消息传递理解关系网络。
+Reinforcement learning studies how an agent learns decisions through interaction and reward. It is useful for games, robotics, path planning, and control tasks where long-term outcomes matter.
 
-- 3. 泛化控制主线：线性/逻辑回归建立可解释基线；Lasso 和 Ridge 通过正则化控制模型复杂度，防止模型在训练数据上过度自由。
+## Deep Learning Model Map
 
-这张地图服务于后续两个方向：AI for Science 中的分子/蛋白/材料建模，以及 Physical AI 中的感知、状态建模与真实物理系统交互。
+CNNs learn local spatial patterns in image-like data. RNNs process sequences step by step. GRUs improve RNNs with gates that decide what to keep, forget, and update. Transformers use self-attention to model token relationships in parallel. Multi-head attention gives a model multiple representation spaces. Positional encoding gives order information to attention-based models.
 
-## 1. 第一性原理框架：所有模型都从“数据结构”出发
+RBF, or Radial Basis Function, is different from positional encoding. RBF focuses on distance from a center point and is often used in kernel methods, interpolation, and classical machine learning. Positional encoding focuses on sequence order.
 
-理解模型时，首先不要问“它火不火”，而要问：数据长什么样？任务要预测什么？模型如何从数据中抽取结构？
-
-| 问题 | 第一性原理回答 |
-| --- | --- |
-| 它解决什么？ | 把输入数据中的结构转化为可预测、可分类、可生成或可决策的模型。 |
-| 它依赖什么假设？ | 每个模型都隐含一种对数据结构的假设：局部性、序列性、关系性、线性、稀疏性或动态性。 |
-| 它为什么有效？ | 不是因为名字高级，而是因为它的结构和数据本身的结构相匹配。 |
-| 它为什么会失败？ | 当模型假设与数据结构不匹配，或模型自由度超过数据支撑能力时，就会失效。 |
-
-## 2. AI、机器学习与深度学习：从目标到方法
-
-| 层级 | 本质 | 直观理解 |
-| --- | --- | --- |
-| Artificial Intelligence | 让机器表现出理解、预测、生成、决策等智能行为。 | 最大目标层。 |
-| Machine Learning | 让机器从数据中学习规律并形成模型。 | AI 实现智能的重要手段。 |
-| Deep Learning | 用多层神经网络逐层提取抽象特征。 | 机器学习中的强力分支，擅长图像、文本、多模态等复杂数据。 |
-
-深度学习的基本逻辑是逐层抽象：先捕捉低级特征，再组合成高级语义；预测错误后通过反向传播修正参数。它的力量来自“层级表示学习”，而不是单纯堆叠公式。
-
-## 3. 三种学习范式：答案、结构与奖励
-
-| 范式 | 训练信号 | 核心问题 | 典型任务 |
-| --- | --- | --- | --- |
-| 监督学习 | 有标签答案。 | 如何从输入映射到正确输出？ | 房价预测、疾病分类、垃圾邮件识别。 |
-| 无监督学习 | 无标签，只看数据本身。 | 数据内部有什么结构？ | 聚类、降维、异常检测。 |
-| 强化学习 | 奖励信号。 | 如何选择行动以最大化长期收益？ | 游戏 AI、机器人控制、路径规划。 |
-
-监督学习像有标准答案的训练；无监督学习是在无答案的数据中寻找结构；强化学习则是在环境反馈中形成策略。三者不是高低关系，而是对应不同问题设定。
-
-## 4. 深度学习模型模块
-
-### 4.1 CNN：利用局部空间结构处理图像
-
-| 维度 | 要点 |
-| --- | --- |
-| 数据结构 | 图像是二维像素网格，局部区域之间存在空间相关性。 |
-| 核心机制 | 卷积核在局部窗口中滑动，提取边缘、纹理、形状等层级特征。 |
-| 第一性原理 | 图像中的意义往往先出现在局部，再组合成整体。CNN 的结构正好匹配这种局部到整体的规律。 |
-| 边界 | 对长距离全局关系和非网格结构不天然擅长。 |
-
-### 4.2 RNN 与 GRU：序列记忆与门控更新
-
-RNN 面向序列数据：文本、语音、时间序列、传感器流。它按时间步处理输入，并把历史状态传递到下一步。问题在于长序列中早期信息容易衰减，出现长期依赖与梯度消失问题。
-
-| 模型 | 核心机制 | 第一性原理 | 适用边界 |
-| --- | --- | --- | --- |
-| RNN | 逐步读取序列，并传递隐藏状态。 | 当前判断依赖当前输入与过去记忆。 | 长序列中记忆容易衰减。 |
-| GRU | 通过更新门与重置门决定保留或遗忘信息。 | 不是所有历史都同等重要，模型需要选择性记忆。 | 比普通 RNN 稳定且轻量，但全局并行性不如 Transformer。 |
-
-> 关键校正：GRU 是 RNN 家族的改良版，不是 Transformer 的补丁。它解决的是传统循环网络中的长期依赖问题。
-
-### 4.3 Transformer：用注意力直接建模全局关系
-
-| 组成 | 作用 |
-| --- | --- |
-| Self-Attention | 计算序列中任意 token 与其他 token 的关系。 |
-| Multi-Head Attention | 多个注意力头从不同表示子空间观察关系。 |
-| Positional Encoding | 补充序列顺序信息，因为 Transformer 本身不按时间步读取。 |
-| Encoder / Decoder | 编码理解输入，解码生成输出。 |
-
-Transformer 的第一性原理是：语言理解不应只依赖相邻顺序，而应允许每个 token 直接观察全局上下文。多头注意力可以理解为多个分析视角同时工作：有的关注语法，有的关注指代，有的关注长距离依赖。
-
-### 4.4 GRU 与 Transformer 的判断结论
-
-| 维度 | GRU | Transformer |
-| --- | --- | --- |
-| 处理方式 | 按时间步顺序处理。 | 并行处理整个序列。 |
-| 长期依赖 | 比普通 RNN 强，但仍有限。 | 直接建模全局关系，长距离依赖更强。 |
-| 计算资源 | 更轻量。 | 通常更吃算力。 |
-| 典型场景 | 小模型、低算力、实时序列、嵌入式任务。 | NLP、大模型、多模态、长上下文。 |
-
-> 阶段性结论：在大规模 NLP 与大模型时代，Transformer 通常更强；但在小规模、低算力、实时序列任务中，GRU 仍然有工程价值。
-
-### 4.5 ResNet：深层网络学习“变化量”
-
-ResNet 的核心不是让每一层重新学习完整映射，而是学习在原始输入基础上需要改变多少。
-
-核心形式：
+ResNet uses residual connections:
 
 ```text
 H(x) = F(x) + x
 ```
 
-| 部分 | 含义 |
-| --- | --- |
-| x | 原始输入，通过 shortcut connection 直接传递。 |
-| F(x) | 网络需要学习的残差，即“应该改变的部分”。 |
-| H(x) | 最终输出，是原始信息与残差修正的叠加。 |
+GANs train a generator and discriminator together. GNNs are designed for node-edge structure and are relevant to molecules, materials, and interaction networks.
 
-> 第一性原理：深层网络越深，越容易丢失信息、训练困难。残差连接提供一条信息与梯度的高速通道，使网络可以在“保留原稿”的基础上逐步修订，而不是每层都重写全部内容。
+## Classical Machine Learning Connection
 
-### 4.6 GAN：用对抗逼近真实分布
+Classical machine learning models remain important because they often provide interpretable baselines and strong performance on structured data. Models such as linear regression, logistic regression, decision trees, random forests, SVMs, Naive Bayes, KNN, PCA, and clustering methods help me understand probability, distance, decision boundaries, and feature engineering.
 
-| 角色 | 任务 |
-| --- | --- |
-| Generator | 生成样本，目标是让样本越来越接近真实数据。 |
-| Discriminator | 判断样本是真实还是生成，目标是识别伪造。 |
+## What I Learned
 
-GAN 的第一性原理是博弈：生成器与判别器互相推动，一个提高伪造能力，一个提高识别能力，最终使生成分布逼近真实分布。其典型风险是 mode collapse，即生成器只学会少数模式，反复生成相似样本，丧失多样性。
+Different model families are not isolated names. They can be understood by asking what structure the model is trying to learn: local image structure, sequential dependency, global attention, graph relationships, probability distributions, or decision boundaries.
 
-### 4.7 GNN：把对象放进关系网络中分析
+## Current Limitations
 
-| 概念 | 含义 |
-| --- | --- |
-| Node | 实体，例如原子、人、路口、概念。 |
-| Edge | 关系，例如化学键、社交关系、道路、知识连接。 |
-| Message Passing | 节点通过边从邻居接收信息并更新自身表示。 |
-| Graph Embedding | 把节点或整张图编码为可用于预测的向量表示。 |
+This note is a concept map rather than a complete mathematical treatment. I still need to implement more models from scratch and compare them with library-based baselines.
 
-GNN 的第一性原理是：许多对象的意义不只来自自身属性，还来自它在关系网络中的位置和邻居。分子、蛋白、材料、交通网络、知识图谱都天然适合这种建模方式。
+## Next Learning Steps
 
-与 AI for Science 的连接：分子可视为原子与化学键构成的图；材料结构、蛋白相互作用和物理系统也常包含复杂关系。GNN 因此是科学建模中的重要基础模型。
-
-## 5. 概念校正：RBF 不是 Positional Encoding
-
-| 概念 | 解决的问题 | 核心对象 |
-| --- | --- | --- |
-| RBF / 径向基函数 | 根据点到中心的距离计算响应或相似度。 | 距离、中心、非线性映射。 |
-| Positional Encoding | 给 Transformer 添加顺序信息。 | token 的序列位置。 |
-
-两者名字都有“位置感”，但本质不同：RBF 解决距离相似性问题；位置编码解决序列顺序问题。
-
-## 6. 经典机器学习模型模块
-
-### 6.1 线性回归：用线性关系预测连续值
-
-| 维度 | 要点 |
-| --- | --- |
-| 任务 | 预测连续数值，例如房价、销售额、成本。 |
-| 核心假设 | 输入变量与输出之间可以被线性关系近似。 |
-| 优化目标 | 最小化预测值与真实值之间的误差平方和，即最小二乘思想。 |
-| 边界 | 对复杂非线性关系表达能力有限。 |
-
-### 6.2 逻辑回归：用回归形式做分类
-
-逻辑回归虽然名字中有“回归”，但常用于分类，尤其是二分类。它用线性模型得到一个分数，再通过 sigmoid 函数压缩为 0 到 1 之间的概率。
-
-| 维度 | 要点 |
-| --- | --- |
-| 任务 | 分类判断，例如是否患病、是否违约、是否垃圾邮件。 |
-| 关键函数 | Sigmoid，把连续分数转化为概率。 |
-| 第一性原理 | 用可解释的线性边界表达类别区分，并通过损失函数不断修正。 |
-| 一句话 | 用回归的方法，做分类的事情。 |
-
-### 6.3 正则化：限制模型自由度以换取泛化能力
-
-当变量过多或参数过大时，模型容易在训练集上表现很好，却在新数据上失效。正则化的本质是给模型自由度加约束：不仅要拟合数据，还要保持参数克制。
-
-正则化不是为了让训练误差最低，而是为了让模型在未知数据上更可靠。
-
-### 6.4 Lasso 与 Ridge：删变量与压变量
-
-| 模型 | 正则化 | 形式直觉 | 核心效果 | 适合场景 |
-| --- | --- | --- | --- | --- |
-| Lasso | L1：sum(\|w\|) | 惩罚系数绝对值之和。 | 部分系数可变为 0，实现特征选择。 | 高维特征、噪声变量多、需要解释性。 |
-| Ridge | L2：sum(w²) | 惩罚系数平方和。 | 系数被压小但通常不为 0。 | 多重共线性、需要稳定预测、保留所有变量。 |
-
-> 第一性原理：Lasso 追求稀疏性，Ridge 追求稳定性。Lasso 像“删变量”，Ridge 像“压变量”。
-
-### 6.5 为什么 L1 会稀疏，L2 通常不会？
-
-| 问题 | 解释 |
-| --- | --- |
-| L1 为什么能把系数压到 0？ | 绝对值函数在 0 点有尖角，优化过程更容易在 0 点停住，因此产生稀疏解。 |
-| L2 为什么多半只是接近 0？ | 平方函数是光滑的，参数越接近 0，惩罚力度越小，因此更倾向于连续压缩而非直接清零。 |
-| 几何直觉 | L1 的约束区域有尖角，最优解更容易落在坐标轴上；L2 的约束区域光滑，解通常分散在多个维度。 |
-
-## 7. 本阶段模型地图总结
-
-| 模型/方法 | 处理对象 | 核心机制 | 一句话判断 |
-| --- | --- | --- | --- |
-| CNN | 图像/网格数据 | 局部卷积 | 从局部空间结构中提取特征。 |
-| RNN | 序列数据 | 隐藏状态递归传递 | 按时间顺序保存历史信息。 |
-| GRU | 序列数据 | 门控记忆 | 选择性记住与遗忘。 |
-| Transformer | 序列/多模态 | 注意力机制 | 直接建模全局关系。 |
-| ResNet | 深层网络 | 残差连接 | 学习变化量，保留原始信息。 |
-| GAN | 生成任务 | 生成器与判别器对抗 | 通过博弈逼近真实分布。 |
-| GNN | 图结构数据 | 节点间消息传递 | 在关系网络中理解对象。 |
-| 线性回归 | 连续值预测 | 线性拟合 | 用线性关系预测数值。 |
-| 逻辑回归 | 分类任务 | Sigmoid 概率映射 | 用回归形式做分类。 |
-| Lasso | 高维线性模型 | L1 正则化 | 删变量，获得稀疏性。 |
-| Ridge | 共线性/过拟合控制 | L2 正则化 | 压变量，增强稳定性。 |
-
-## 8. 保留问题：下一轮学习要追问到机制层
-
-- 1. L1 正则化的稀疏性如何从几何约束和优化角度严格解释？
-
-- 2. Transformer 是否在所有序列任务中都优于 GRU？哪些低算力、实时任务仍适合 GRU？
-
-- 3. GNN 在分子性质预测中如何把原子、化学键和三维结构联合建模？
-
-- 4. GAN 的 mode collapse 是否可以通过 Wasserstein GAN、正则化或多样性约束缓解？
-
-- 5. 这些基础模型如何迁移到 AI for Science 的分子、蛋白、材料和世界模型任务中？
-
-## 9. 下一阶段学习计划
-
-| 优先级 | 主题 | 学习目标 |
-| --- | --- | --- |
-| 1 | Naive Bayes | 理解概率建模与条件独立假设。 |
-| 2 | KNN | 理解基于距离的非参数分类。 |
-| 3 | SVM | 理解最大间隔、核函数与 RBF。 |
-| 4 | Decision Tree / Random Forest | 理解树模型、集成学习与可解释性。 |
-| 5 | Boosting / XGBoost | 理解弱学习器如何逐步增强。 |
-| 6 | K-means / PCA | 补齐无监督学习与降维基础。 |
-| 7 | Metrics | 系统复习 Accuracy、Precision、Recall、F1、AUC。 |
-| 8 | Bias-Variance Tradeoff | 理解过拟合、欠拟合与泛化能力。 |
-
-## 10. 面试表达版本：一句话压缩
-
-我正在从第一性原理建立模型地图：不同模型本质上对应不同数据结构与任务假设。CNN 对应局部空间结构，RNN/GRU 对应序列记忆，Transformer 对应全局关系建模，GNN 对应关系网络，ResNet 解决深层训练，GAN 解决生成分布逼近，Lasso/Ridge 则从正则化角度控制模型复杂度。我的目标不是背模型名，而是理解每个模型为什么存在、何时有效、何时失效，以及如何迁移到 AI for Science 和 Physical AI 的真实问题中。
+I will connect these model families to small experiments, especially graph learning, molecular modeling, and reproducible AI for Science workflows.
