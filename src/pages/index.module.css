@@ -21,3 +21,14 @@
   align-items: center;
   justify-content: center;
 }
+
+.email {
+  margin: 0.75rem 0 1.5rem;
+  font-size: 1.05rem;
+}
+
+.email a {
+  color: var(--ifm-hero-text-color);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}

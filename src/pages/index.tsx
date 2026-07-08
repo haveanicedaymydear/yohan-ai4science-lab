@@ -17,6 +17,9 @@ function HomepageHeader() {
           {siteConfig.title}
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className={styles.email}>
+          <a href="mailto:zhoulivan@gmail.com">zhoulivan@gmail.com</a>
+        </p>
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
@@ -32,8 +35,8 @@ function HomepageHeader() {
 export default function Home(): ReactNode {
   return (
     <Layout
-      title="Yohan Lab"
-      description="A personal learning portfolio documenting machine learning, deep learning, AI for Science, and reproducible research workflows.">
+      title="Livan Zhou"
+      description="AI Researcher. Personal learning portfolio documenting machine learning, deep learning, AI for Science, and reproducible research workflows.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

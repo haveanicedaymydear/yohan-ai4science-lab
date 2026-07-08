@@ -3,9 +3,8 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Yohan Lab',
-  tagline:
-    'A personal learning portfolio documenting my preparation in machine learning, deep learning, AI for Science, and reproducible research workflows.',
+  title: 'Livan Zhou',
+  tagline: 'AI Researcher',
   favicon: 'img/favicon.ico',
 
   future: {
@@ -48,9 +47,9 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Yohan Lab',
+      title: 'Livan Zhou',
       logo: {
-        alt: 'Yohan Lab Logo',
+        alt: 'Livan Zhou Logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -71,30 +70,54 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Yohan Lab',
+          title: 'Livan Zhou',
           items: [
-            { label: 'Introduction', to: '/docs/intro' },
-            { label: 'AI Foundations', to: '/docs/deep-learning/deep-learning-and-classical-ml-map' },
-            { label: 'AI for Science Notes', to: '/docs/ai-for-science/intro' },
+            {
+              label: 'Introduction',
+              to: '/docs/intro',
+            },
+            {
+              label: 'AI Foundations',
+              to: '/docs/deep-learning/deep-learning-and-classical-ml-map',
+            },
+            {
+              label: 'AI for Science Notes',
+              to: '/docs/ai-for-science/intro',
+            },
           ],
         },
         {
           title: 'Research Workflow',
           items: [
-            { label: 'Reproducible Research', to: '/docs/reproduction/diffdock-minimal-reproduction-log' },
-            { label: 'Paper Reading', to: '/docs/paper-reading/template' },
-            { label: 'Projects', to: '/docs/projects/intro' },
+            {
+              label: 'Reproducible Research',
+              to: '/docs/reproduction/diffdock-minimal-reproduction-log',
+            },
+            {
+              label: 'Paper Reading',
+              to: '/docs/paper-reading/template',
+            },
+            {
+              label: 'Projects',
+              to: '/docs/projects/intro',
+            },
           ],
         },
         {
           title: 'More',
           items: [
-            { label: 'Scientific Agent Notes', to: '/docs/scientific-agent/intro' },
-            { label: 'GitHub', href: 'https://github.com/haveanicedaymydear/yohan-ai4science-lab' },
+            {
+              label: 'Scientific Agent Notes',
+              to: '/docs/scientific-agent/intro',
+            },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/haveanicedaymydear/yohan-ai4science-lab',
+            },
           ],
         },
       ],
-      copyright: `Copyright (c) ${new Date().getFullYear()} Yohan Lab. Personal AI learning portfolio.`,
+      copyright: `Copyright (c) ${new Date().getFullYear()} Livan Zhou. Personal AI learning portfolio.`,
     },
     prism: {
       theme: prismThemes.github,

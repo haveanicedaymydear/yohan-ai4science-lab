@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # Introduction
 
-Yohan Lab is my personal AI learning portfolio.
+This site is Livan Zhou's personal AI learning portfolio.
 
 It documents my ongoing preparation in machine learning, deep learning, AI for Science, and reproducible research workflows. The purpose of this site is to keep my learning process structured, traceable, and technically accountable.
 

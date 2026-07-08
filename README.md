@@ -1,4 +1,4 @@
-# Yohan AI4Sci Lab
+# Livan Zhou AI Research Portfolio
 
 Personal learning archive for AI for Science, deep learning, paper reading,
 code reproduction, and research projects.

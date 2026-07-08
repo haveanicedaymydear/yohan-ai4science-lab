@@ -86,7 +86,7 @@ A useful experiment record should include:
 
 If an experiment only remains at the level of "I ran it once," its value is limited. A stronger workflow records the process so that it can be compared, reproduced, and improved.
 
-My current Yohan Lab is a lightweight, human-in-the-loop research documentation workflow:
+My current learning portfolio is a lightweight, human-in-the-loop research documentation workflow:
 
 ```text
 learning material input
