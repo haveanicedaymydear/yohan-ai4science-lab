@@ -53,7 +53,7 @@ const config: Config = {
     colorMode: {
       defaultMode: 'dark',
       respectPrefersColorScheme: false,
-      disableSwitch: false,
+      disableSwitch: true,
     },
     navbar: {
       title: 'Livan Zhou',
