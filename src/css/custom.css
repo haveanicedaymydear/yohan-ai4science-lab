@@ -1,30 +1,103 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #147f70;
+  --ifm-color-primary-dark: #117265;
+  --ifm-color-primary-darker: #106c5f;
+  --ifm-color-primary-darkest: #0d594e;
+  --ifm-color-primary-light: #178c7b;
+  --ifm-color-primary-lighter: #189281;
+  --ifm-color-primary-lightest: #1ca590;
+  --ifm-background-color: #f7f9fb;
+  --ifm-font-family-base: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --ifm-heading-font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --ifm-heading-font-weight: 720;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(20, 127, 112, 0.1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.navbar {
+  min-height: 60px;
+  border-bottom: 1px solid rgba(132, 151, 171, 0.18);
+  background: rgba(7, 17, 31, 0.94);
+  box-shadow: none;
+  backdrop-filter: blur(18px);
+}
+
+.navbar__title,
+.navbar__link {
+  color: #eaf2f8;
+}
+
+.navbar__title {
+  font-weight: 760;
+  letter-spacing: -0.02em;
+}
+
+.navbar__link {
+  font-size: 0.86rem;
+  font-weight: 620;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: #83f0dc;
+}
+
+.navbar-sidebar {
+  background: #07111f;
+}
+
+.navbar-sidebar__brand {
+  border-bottom: 1px solid rgba(132, 151, 171, 0.18);
+}
+
+.navbar-sidebar .menu__link {
+  color: #dce7f0;
+}
+
+.navbar__toggle {
+  color: #eaf2f8;
+}
+
+.footer {
+  padding: 2.6rem 0;
+  background: #050c15;
+  border-top: 1px solid rgba(132, 151, 171, 0.14);
+}
+
+.footer__title {
+  color: #edf4fb;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.footer__link-item,
+.footer__copyright {
+  color: #91a4b8;
+  font-size: 0.82rem;
+}
+
+.footer__link-item:hover {
+  color: #83f0dc;
+}
+
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #55d6be;
+  --ifm-color-primary-dark: #3ecfb4;
+  --ifm-color-primary-darker: #33c9ae;
+  --ifm-color-primary-darkest: #2aa58f;
+  --ifm-color-primary-light: #6cdcc8;
+  --ifm-color-primary-lighter: #78dfcd;
+  --ifm-color-primary-lightest: #9ce9da;
+  --ifm-background-color: #07111f;
+  --docusaurus-highlighted-code-line-bg: rgba(85, 214, 190, 0.12);
 }
