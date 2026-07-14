@@ -5,6 +5,8 @@ import Heading from '@theme/Heading';
 
 import styles from './index.module.css';
 
+const OPENREVIEW_PROFILE = 'https://openreview.net/profile?id=%7ELiuyuehan_Zhou1';
+
 const projects = [
   {
     label: 'FLAGSHIP MANUSCRIPT',
@@ -112,7 +114,7 @@ function Hero() {
               View research evidence
             </a>
             <ExternalLink href="https://github.com/haveanicedaymydear">GitHub profile</ExternalLink>
-            <ExternalLink href="https://openreview.net/search?term=Livan%20Zhou">OpenReview</ExternalLink>
+            <ExternalLink href={OPENREVIEW_PROFILE}>OpenReview</ExternalLink>
           </div>
           <div className={styles.heroMetrics} aria-label="Profile highlights">
             <div>
@@ -273,7 +275,7 @@ function Background() {
           </p>
           <div className={styles.aboutLinks}>
             <ExternalLink href="https://github.com/haveanicedaymydear">All public repositories</ExternalLink>
-            <ExternalLink href="https://openreview.net/search?term=Livan%20Zhou">Research profile</ExternalLink>
+            <ExternalLink href={OPENREVIEW_PROFILE}>Research profile</ExternalLink>
             <a href="mailto:zhoulivan@gmail.com" className={styles.externalLink}>
               Contact <span aria-hidden="true">↗</span>
             </a>
