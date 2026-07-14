@@ -4,14 +4,14 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Livan Zhou',
-  tagline: 'AI Researcher',
+  tagline: 'AI Researcher — Developmental Agency, Governed Memory, and Multi-Agent Systems',
   favicon: 'img/favicon.ico',
 
   future: {
     v4: true,
   },
 
-  url: 'https://yohan-ai4science-lab.vercel.app',
+  url: 'https://yohanlab.vercel.app',
   baseUrl: '/',
 
   organizationName: 'haveanicedaymydear',
@@ -30,8 +30,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl:
-            'https://github.com/haveanicedaymydear/yohan-ai4science-lab/tree/main/',
+          editUrl: 'https://github.com/haveanicedaymydear/yohan-ai4science-lab/tree/main/',
         },
         blog: false,
         theme: {
@@ -43,24 +42,39 @@ const config: Config = {
 
   themeConfig: {
     image: 'img/docusaurus-social-card.jpg',
+    metadata: [
+      {
+        name: 'keywords',
+        content:
+          'Livan Zhou, developmental agency, agent memory, multi-agent systems, responsible NLP, uncertainty-aware AI',
+      },
+      { name: 'author', content: 'Livan Zhou' },
+    ],
     colorMode: {
-      respectPrefersColorScheme: true,
+      defaultMode: 'dark',
+      respectPrefersColorScheme: false,
+      disableSwitch: false,
     },
     navbar: {
       title: 'Livan Zhou',
-      logo: {
-        alt: 'Livan Zhou Logo',
-        src: 'img/logo.svg',
-      },
+      hideOnScroll: false,
       items: [
+        { to: '/#research', label: 'Research', position: 'left' },
+        { to: '/#agenda', label: 'Agenda', position: 'left' },
+        { to: '/#evidence', label: 'Evidence', position: 'left' },
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
+          label: 'Notes',
           position: 'left',
-          label: 'Portfolio',
         },
         {
-          href: 'https://github.com/haveanicedaymydear/yohan-ai4science-lab',
+          href: 'https://openreview.net/search?term=Livan%20Zhou',
+          label: 'OpenReview',
+          position: 'right',
+        },
+        {
+          href: 'https://github.com/haveanicedaymydear',
           label: 'GitHub',
           position: 'right',
         },
@@ -70,54 +84,41 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Livan Zhou',
+          title: 'Research',
           items: [
-            {
-              label: 'Introduction',
-              to: '/docs/intro',
-            },
-            {
-              label: 'AI Foundations',
-              to: '/docs/deep-learning/deep-learning-and-classical-ml-map',
-            },
-            {
-              label: 'AI for Science Notes',
-              to: '/docs/ai-for-science/intro',
-            },
+            { label: 'Selected Work', to: '/#research' },
+            { label: 'Research Agenda', to: '/#agenda' },
+            { label: 'Evidence Standard', to: '/#evidence' },
           ],
         },
         {
-          title: 'Research Workflow',
+          title: 'Public Evidence',
           items: [
-            {
-              label: 'Reproducible Research',
-              to: '/docs/reproduction/diffdock-minimal-reproduction-log',
-            },
-            {
-              label: 'Paper Reading',
-              to: '/docs/paper-reading/template',
-            },
-            {
-              label: 'Projects',
-              to: '/docs/projects/intro',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Scientific Agent Notes',
-              to: '/docs/scientific-agent/intro',
-            },
             {
               label: 'GitHub',
-              href: 'https://github.com/haveanicedaymydear/yohan-ai4science-lab',
+              href: 'https://github.com/haveanicedaymydear',
+            },
+            {
+              label: 'OpenReview',
+              href: 'https://openreview.net/search?term=Livan%20Zhou',
+            },
+            {
+              label: 'Research Notes',
+              to: '/docs/intro',
+            },
+          ],
+        },
+        {
+          title: 'Contact',
+          items: [
+            {
+              label: 'zhoulivan@gmail.com',
+              href: 'mailto:zhoulivan@gmail.com',
             },
           ],
         },
       ],
-      copyright: `Copyright (c) ${new Date().getFullYear()} Livan Zhou. Personal AI learning portfolio.`,
+      copyright: `© ${new Date().getFullYear()} Livan Zhou. Research portfolio and public evidence archive.`,
     },
     prism: {
       theme: prismThemes.github,
