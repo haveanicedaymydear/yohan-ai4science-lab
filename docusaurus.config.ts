@@ -69,7 +69,7 @@ const config: Config = {
           position: 'left',
         },
         {
-          href: 'https://openreview.net/search?term=Livan%20Zhou',
+          href: 'https://openreview.net/profile?id=%7ELiuyuehan_Zhou1',
           label: 'OpenReview',
           position: 'right',
         },
@@ -100,7 +100,7 @@ const config: Config = {
             },
             {
               label: 'OpenReview',
-              href: 'https://openreview.net/search?term=Livan%20Zhou',
+              href: 'https://openreview.net/profile?id=%7ELiuyuehan_Zhou1',
             },
             {
               label: 'Research Notes',
