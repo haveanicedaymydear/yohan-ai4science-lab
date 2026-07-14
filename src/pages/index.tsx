@@ -101,7 +101,7 @@ function Hero() {
         <div className={styles.heroCopy}>
           <div className={styles.eyebrow}>
             <span className={styles.statusDot} />
-            AI RESEARCHER · AGENTIC AI & RESPONSIBLE NLP
+            AI RESEARCHER · DEVELOPMENTAL AGENCY & GOVERNED MEMORY
           </div>
           <Heading as="h1" className={styles.heroTitle}>
             Building agents that can <span>develop, remember, and revise.</span>
@@ -122,8 +122,8 @@ function Hero() {
               <span>BSc (Hons) Computer Science</span>
             </div>
             <div>
-              <strong>3</strong>
-              <span>Active research directions</span>
+              <strong>Open Research</strong>
+              <span>Code, experiments, and manuscripts</span>
             </div>
             <div>
               <strong>Evidence-first</strong>
