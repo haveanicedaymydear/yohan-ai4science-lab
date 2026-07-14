@@ -44,16 +44,20 @@ const projects = [
   },
   {
     label: 'DEVELOPMENTAL AGENCY',
-    status: 'Research prototype',
-    title: 'Unlock-Driven Competence Gap Discovery',
-    subtitle: 'From missing capability to self-directed skill acquisition',
+    status: 'Proposal v0.3 · implementation in progress',
+    title: 'Learning What to Learn Next',
+    subtitle: 'Sparse intervention-calibrated developmental leverage',
     description:
-      'An automatic curriculum formulation that represents competence as an unlock graph: agents identify which missing skill would expand the set of tasks—or joint team outcomes—they can reach next.',
-    tags: ['Open-ended learning', 'Skill discovery', 'Lifelong multi-agent learning'],
+      'A compute-aware developmental-agency project that estimates how training one currently learnable skill may transfer to capabilities the agent still lacks. It combines a low-cost, agent-specific transfer proxy with sparse real interventions to decide what the agent should develop next under a fixed budget.',
+    tags: ['Developmental agency', 'Cross-skill transfer', 'Autonomous curricula'],
     links: [
       {
         label: 'Repository',
         href: 'https://github.com/haveanicedaymydear/Unlock-Driven-Competence-Gap-Discovery',
+      },
+      {
+        label: 'Proposal v0.3',
+        href: 'https://github.com/haveanicedaymydear/Unlock-Driven-Competence-Gap-Discovery/blob/main/docs/proposal-v0.3.md',
       },
     ],
   },
@@ -63,7 +67,7 @@ const agenda = [
   {
     number: '01',
     title: 'Developmental agency',
-    text: 'How can an agent decide what it should learn next, generate new goals from experience, and organise its history into a coherent trajectory of growth?',
+    text: 'How can an agent estimate which currently learnable capability will most expand the competence it still lacks, then revise that developmental priority as its own skills and experience change?',
   },
   {
     number: '02',
@@ -107,7 +111,7 @@ function Hero() {
             Building agents that can <span>develop, remember, and revise.</span>
           </Heading>
           <p className={styles.heroLead}>
-            I am Livan Zhou, a First Class Honours Computer Science graduate from Coventry University. My work focuses on developmental agency, governed memory, multi-agent coordination, and uncertainty-aware AI systems.
+            I am Livan Zhou, a First Class Honours Computer Science graduate from Coventry University. My work focuses on developmental agency—especially how agents decide what capability to develop next—governed memory, multi-agent coordination, and uncertainty-aware AI systems.
           </p>
           <div className={styles.heroActions}>
             <a className={styles.primaryButton} href="#research">
@@ -143,7 +147,7 @@ function Hero() {
           <div className={styles.identityCard}>
             <div>
               <span className={styles.identityLabel}>CURRENT FOCUS</span>
-              <strong>Open-ended autonomous agents with cognitive continuity</strong>
+              <strong>Developmental agents that choose what to learn next</strong>
             </div>
             <a href="mailto:zhoulivan@gmail.com" aria-label="Email Livan Zhou">
               zhoulivan@gmail.com
@@ -268,7 +272,7 @@ function Background() {
         </div>
         <div className={styles.aboutCopy}>
           <p>
-            I graduated with First Class Honours in Computer Science from Coventry University. My recent work moves from robust AI-generated text detection toward the deeper problem of agents that maintain cognitive continuity, discover competence gaps, and coordinate as teams.
+            I graduated with First Class Honours in Computer Science from Coventry University. My recent work moves from robust AI-generated text detection toward the deeper problem of agents that maintain cognitive continuity, estimate their own developmental leverage, and coordinate as teams.
           </p>
           <p>
             I am particularly interested in research environments where conceptual ambition is matched by controlled simulation, reproducible engineering, and clear empirical baselines.
@@ -306,7 +310,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title="AI Researcher"
-      description="Livan Zhou researches developmental agency, governed agent memory, multi-agent coordination, and uncertainty-aware AI systems.">
+      description="Livan Zhou researches developmental agency, compute-aware autonomous curricula, governed agent memory, multi-agent coordination, and uncertainty-aware AI systems.">
       <main className={styles.page}>
         <Hero />
         <Research />
