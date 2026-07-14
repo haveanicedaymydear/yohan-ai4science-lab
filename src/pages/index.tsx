@@ -135,7 +135,7 @@ function Hero() {
         <aside className={styles.portraitPanel} aria-label="Livan Zhou profile">
           <div className={styles.portraitFrame}>
             <img
-              src="/img/livan-zhou-portrait.svg"
+              src="/img/livan-zhou-headshot-2026.jpg"
               alt="Professional portrait of Livan Zhou"
               className={styles.portrait}
             />
