@@ -87,9 +87,9 @@
   max-width: 860px;
   margin: 1.35rem 0 1.5rem;
   color: var(--text);
-  font-size: clamp(3.15rem, 6vw, 6rem);
-  line-height: 0.98;
-  letter-spacing: -0.055em;
+  font-size: clamp(2.95rem, 5.4vw, 5.55rem);
+  line-height: 0.99;
+  letter-spacing: -0.052em;
   font-weight: 780;
 }
 
@@ -229,15 +229,17 @@
   width: 100%;
   aspect-ratio: 1 / 1.08;
   object-fit: cover;
-  object-position: center 34%;
+  object-position: center 24%;
+  transform: scale(1.09);
+  transform-origin: center 28%;
   filter: saturate(0.88) contrast(1.04);
 }
 
 .identityCard {
   position: relative;
-  width: calc(100% - 2rem);
-  margin: -2.4rem auto 0;
-  padding: 1.1rem 1.25rem;
+  width: calc(100% - 2.8rem);
+  margin: -2rem auto 0;
+  padding: 0.95rem 1.1rem;
   border: 1px solid rgba(150, 174, 199, 0.26);
   border-radius: 0.75rem;
   background: rgba(7, 17, 31, 0.92);
@@ -247,24 +249,24 @@
 
 .identityCard strong {
   display: block;
-  margin-top: 0.3rem;
+  margin-top: 0.28rem;
   color: var(--text);
-  font-size: 0.94rem;
-  line-height: 1.45;
+  font-size: 0.9rem;
+  line-height: 1.42;
 }
 
 .identityLabel {
   color: var(--accent-strong);
-  font-size: 0.65rem;
+  font-size: 0.63rem;
   font-weight: 750;
   letter-spacing: 0.13em;
 }
 
 .identityCard a {
   display: inline-block;
-  margin-top: 0.9rem;
-  color: var(--muted);
-  font-size: 0.78rem;
+  margin-top: 0.78rem;
+  color: #c6d4e2;
+  font-size: 0.82rem;
   text-decoration: none;
 }
 
@@ -553,7 +555,7 @@
   }
 
   .heroTitle {
-    font-size: clamp(3rem, 6vw, 4.9rem);
+    font-size: clamp(2.85rem, 5.3vw, 4.55rem);
   }
 
   .evidenceGrid,
@@ -625,7 +627,7 @@
   }
 
   .heroTitle {
-    font-size: clamp(2.65rem, 14vw, 4rem);
+    font-size: clamp(2.55rem, 13vw, 3.8rem);
   }
 
   .heroLead {
