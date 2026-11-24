@@ -3,8 +3,8 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Livan Zhou',
-  tagline: 'AI Researcher — Developmental Agency, Governed Memory, and Multi-Agent Systems',
+  title: 'Yohan Zhou',
+  tagline: 'Developmental Robotics and World-Model Learning',
   favicon: 'img/favicon.ico',
 
   future: {
@@ -41,14 +41,14 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/yohan-zhou.jpg',
     metadata: [
       {
         name: 'keywords',
         content:
-          'Livan Zhou, developmental agency, agent memory, multi-agent systems, responsible NLP, uncertainty-aware AI',
+          'Yohan Zhou, developmental robotics, world models, agent memory, active learning',
       },
-      { name: 'author', content: 'Livan Zhou' },
+      { name: 'author', content: 'Yohan Zhou' },
     ],
     colorMode: {
       defaultMode: 'dark',
@@ -56,12 +56,12 @@ const config: Config = {
       disableSwitch: true,
     },
     navbar: {
-      title: 'Livan Zhou',
+      title: 'Yohan Zhou',
       hideOnScroll: false,
       items: [
         { to: '/#research', label: 'Research', position: 'left' },
         { to: '/#agenda', label: 'Agenda', position: 'left' },
-        { to: '/#evidence', label: 'Evidence', position: 'left' },
+        { to: '/#about', label: 'Education', position: 'left' },
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
@@ -88,7 +88,7 @@ const config: Config = {
           items: [
             { label: 'Selected Work', to: '/#research' },
             { label: 'Research Agenda', to: '/#agenda' },
-            { label: 'Evidence Standard', to: '/#evidence' },
+            { label: 'Education', to: '/#about' },
           ],
         },
         {
@@ -112,13 +112,13 @@ const config: Config = {
           title: 'Contact',
           items: [
             {
-              label: 'zhoulivan@gmail.com',
-              href: 'mailto:zhoulivan@gmail.com',
+              label: 'ZHOU0729@e.ntu.edu.sg',
+              href: 'mailto:ZHOU0729@e.ntu.edu.sg',
             },
           ],
         },
       ],
-      copyright: `© ${new Date().getFullYear()} Livan Zhou. Research portfolio and public evidence archive.`,
+      copyright: `© ${new Date().getFullYear()} Yohan Zhou. Research portfolio and public evidence archive.`,
     },
     prism: {
       theme: prismThemes.github,

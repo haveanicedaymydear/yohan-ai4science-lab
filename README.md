@@ -1,7 +1,7 @@
-# Livan Zhou AI Research Portfolio
+# Yohan Zhou · Research Portfolio
 
-Personal learning archive for AI for Science, deep learning, paper reading,
-code reproduction, and research projects.
+Source for [yohanlab.vercel.app](https://yohanlab.vercel.app), with selected research
+and notes on developmental robotics, world-model learning, and bounded agent memory.
 
 ## Installation
 
