@@ -24,7 +24,7 @@ const projects = [
     title: 'From Notes to Decisions',
     subtitle: 'Disentangling Memory, Inference, and Capacity in Memory-Bounded LLM Agents',
     description:
-      'A preregistered note-swap study tests how a 128-token memory budget affects what an LLM agent records and how it uses those records. One of three confirmatory hypotheses was supported. The study did not establish an end-to-end gain.',
+      'A preregistered note-swap study tests how a 128-token memory budget affects what an LLM agent records and how it uses those records. Across approximately 26,000 model calls, one of three confirmatory hypotheses was supported. Secondary analyses found memory and inference gaps of similar magnitude; no end-to-end gain was established.',
     tags: ['LLM agents', 'Memory', 'Inference'],
     links: [],
   },
@@ -34,7 +34,7 @@ const projects = [
     title: 'Self–World Change Attribution',
     subtitle: 'Distinguishing skill forgetting from environmental change',
     description:
-      'I use preregistered simulations to study whether additional practice can help an agent distinguish changes in its own competence from changes in the environment.',
+      'Through nine rounds of preregistered simulation experiments and controlled ablations, I investigate how agents distinguish recoverable skill forgetting from environmental deterioration. The work evaluates Bayesian inference, change-point detection, and model retention, with a focus on the value of additional practice.',
     tags: ['Continual learning', 'Change attribution'],
     links: [],
   },
@@ -44,7 +44,7 @@ const projects = [
     title: 'OpenCycle-Mem',
     subtitle: 'Evidence-weighted reopening for long-horizon agent memory',
     description:
-      'A governed-memory mechanism for agents that must preserve useful conclusions without turning earlier reasoning into permanent dogma. Memories remain revisable when later evidence crosses an explicit reopening threshold.',
+      'A governed-memory mechanism for agents that must preserve useful conclusions without turning earlier reasoning into permanent dogma. Memories remain revisable when later evidence crosses an explicit reopening threshold. Across five simulated scenarios with 200 shared seeds each, mean state accuracy was 0.950 versus 0.800 for static governance and 0.500 for raw memory.',
     tags: ['Long-horizon agents', 'Memory governance', 'Multi-agent interface'],
     links: [
       {
@@ -55,11 +55,11 @@ const projects = [
   },
   {
     label: 'DEVELOPMENTAL AGENCY',
-    status: 'Proposal v0.3 · implementation in progress',
-    title: 'Learning What to Learn Next',
+    status: 'Independent research · empirical evaluation in progress',
+    title: 'Developmental Leverage',
     subtitle: 'Sparse intervention-calibrated developmental leverage',
     description:
-      'A compute-aware developmental-agency project that estimates how training one currently learnable skill may transfer to capabilities the agent still lacks. It combines a low-cost, agent-specific transfer proxy with sparse real interventions to decide what the agent should develop next under a fixed budget.',
+      'A compute-aware developmental-agency project that estimates how training one currently learnable skill may transfer to capabilities the agent still lacks. It combines a low-cost, agent-specific transfer proxy with sparse real interventions to decide what the agent should develop next under a fixed budget. Evaluation against seven curriculum baselines using PPO on Craftax-Classic-Symbolic is in progress.',
     tags: ['Developmental agency', 'Cross-skill transfer', 'Autonomous curricula'],
     links: [
       {
@@ -103,6 +103,10 @@ const agenda = [
     text: 'What should an agent retain under a fixed memory budget, and how should it use that information to make decisions?',
   },
   {
+    title: 'Self–world change attribution',
+    text: 'When performance declines, how can an agent tell whether the environment changed or its own competence deteriorated, and decide whether more practice is worthwhile?',
+  },
+  {
     title: 'Developmental robotics',
     text: 'How can a robot decide what to observe or practise next as it develops skills through continuous interaction?',
   },
@@ -128,10 +132,10 @@ function Hero() {
             DEVELOPMENTAL ROBOTICS · WORLD MODELS
           </div>
           <Heading as="h1" className={styles.heroTitle}>
-            Yohan Zhou
+            Yohan Zhou (Liuyuehan Zhou)
           </Heading>
           <p className={styles.heroLead}>
-            I am an MSc student in Robotics and Intelligent Systems at Nanyang Technological University. I study how agents with limited memory learn, test, and revise their models of a changing world. My long-term interest is in developmental robots that acquire skills through continuous interaction.
+            My academic background is in Robotics and Intelligent Systems (MSc, Nanyang Technological University, starting January 2027) and Computing Science (BSc, First Class Honours). I investigate how autonomous agents with bounded memory learn, test, and revise their models of themselves and a changing world. My long-term goal is to understand how developmental robots acquire and adapt skills through continuous interaction.
           </p>
           <div className={styles.heroActions}>
             <a className={styles.primaryButton} href="#research">
@@ -154,7 +158,7 @@ function Hero() {
           <div className={styles.identityCard}>
             <div>
               <span className={styles.identityLabel}>CURRENT FOCUS</span>
-              <strong>World-model learning through active interaction</strong>
+              <strong>Developmental robotics · self–world models · bounded memory</strong>
             </div>
             <a href="mailto:ZHOU0729@e.ntu.edu.sg" aria-label="Email Yohan Zhou">
               ZHOU0729@e.ntu.edu.sg
@@ -233,8 +237,8 @@ function Background() {
           <Heading as="h2">Education</Heading>
         </div>
         <div className={styles.aboutCopy}>
-          <p><strong>Nanyang Technological University</strong><br />MSc in Robotics and Intelligent Systems, School of Mechanical and Aerospace Engineering</p>
-          <p><strong>Coventry University</strong><br />BSc (Hons) in Computing Science, First Class Honours</p>
+          <p><strong>Nanyang Technological University</strong><br />MSc in Robotics and Intelligent Systems, School of Mechanical and Aerospace Engineering · Jan 2027 start</p>
+          <p><strong>Coventry University</strong><br />BSc (Hons) in Computing Science, First Class Honours · 2024–2026</p>
           <div className={styles.aboutLinks}>
             <ExternalLink href="https://github.com/haveanicedaymydear">GitHub</ExternalLink>
             <Link to="/docs/intro" className={styles.internalLink}>Research notes</Link>
@@ -267,7 +271,7 @@ export default function Home(): ReactNode {
   return (
     <Layout
       title="Research Portfolio"
-      description="Yohan Zhou studies developmental robotics, world-model revision, and agents with bounded memory at Nanyang Technological University.">
+      description="Research portfolio of Yohan (Liuyuehan) Zhou: developmental robotics, self–world change attribution, world-model revision, and bounded agent memory.">
       <main className={styles.page}>
         <Hero />
         <Research />
