@@ -9,6 +9,16 @@ const OPENREVIEW_PROFILE = 'https://openreview.net/profile?id=%7ELiuyuehan_Zhou1
 
 const projects = [
   {
+    label: 'DEVELOPMENTAL ROBOTICS',
+    status: 'Sole-author manuscript · Submitted for peer review',
+    title: 'Self–World Change Attribution',
+    subtitle: 'Autonomous adaptation and self-model maintenance in robotics',
+    description:
+      'I investigate how robots distinguish changes in their bodies from changes in the external world, and how this knowledge can inform adaptation decisions. The project combines Bayesian inference, sequential decision-making, and preregistered physics-based simulation studies across robotic manipulation and legged locomotion. Further evaluation is ongoing.',
+    tags: ['Robot learning', 'Bayesian inference', 'MuJoCo', 'Adaptive decision-making'],
+    links: [],
+  },
+  {
     label: 'WORLD-MODEL MAINTENANCE',
     status: 'Sole-author manuscript · AAAI-27 NeuroAI 2.0 Workshop · Under review',
     title: 'Which Part of the World Changed?',
@@ -26,16 +36,6 @@ const projects = [
     description:
       'A preregistered note-swap study tests how a 128-token memory budget affects what an LLM agent records and how it uses those records. Across approximately 26,000 model calls, one of three confirmatory hypotheses was supported. Secondary analyses found memory and inference gaps of similar magnitude; no end-to-end gain was established.',
     tags: ['LLM agents', 'Memory', 'Inference'],
-    links: [],
-  },
-  {
-    label: 'CONTINUAL SKILL LEARNING',
-    status: 'Ongoing research',
-    title: 'Self–World Change Attribution',
-    subtitle: 'Distinguishing skill forgetting from environmental change',
-    description:
-      'Through nine rounds of preregistered simulation experiments and controlled ablations, I investigate how agents distinguish recoverable skill forgetting from environmental deterioration. The work evaluates Bayesian inference, change-point detection, and model retention, with a focus on the value of additional practice.',
-    tags: ['Continual learning', 'Change attribution'],
     links: [],
   },
   {
@@ -104,7 +104,7 @@ const agenda = [
   },
   {
     title: 'Self–world change attribution',
-    text: 'When performance declines, how can an agent tell whether the environment changed or its own competence deteriorated, and decide whether more practice is worthwhile?',
+    text: 'When performance declines, how can an embodied agent distinguish bodily changes from environmental changes and decide whether to adapt its behaviour or revise its internal model?',
   },
   {
     title: 'Developmental robotics',
@@ -135,7 +135,7 @@ function Hero() {
             Yohan Zhou (Liuyuehan Zhou)
           </Heading>
           <p className={styles.heroLead}>
-            My academic background is in Robotics and Intelligent Systems (MSc, Nanyang Technological University, starting January 2027) and Computing Science (BSc, First Class Honours). I investigate how autonomous agents with bounded memory learn, test, and revise their models of themselves and a changing world. My long-term goal is to understand how developmental robots acquire and adapt skills through continuous interaction.
+            I am an incoming MSc student in Robotics and Intelligent Systems at Nanyang Technological University (January 2027), with a First Class Honours BSc in Computing Science. My research focuses on developmental robotics: how autonomous agents learn and revise models of themselves and a changing world, and how they use those models to guide continual adaptation under resource constraints.
           </p>
           <div className={styles.heroActions}>
             <a className={styles.primaryButton} href="#research">
@@ -143,6 +143,7 @@ function Hero() {
             </a>
             <ExternalLink href="https://github.com/haveanicedaymydear">GitHub profile</ExternalLink>
             <ExternalLink href={OPENREVIEW_PROFILE}>OpenReview</ExternalLink>
+            <a className={styles.externalLink} href="mailto:ZHOU0729@e.ntu.edu.sg?subject=Academic%20CV%20request">Request CV <span aria-hidden="true">↗</span></a>
           </div>
 
         </div>
@@ -258,6 +259,7 @@ function Contact() {
       <div className={`container ${styles.contactInner}`}>
         <div>
           <Heading as="h2">Contact</Heading>
+          <p>Open to visiting research opportunities in developmental robotics, robot learning, and adaptive intelligent systems in 2027.</p>
         </div>
         <a href="mailto:ZHOU0729@e.ntu.edu.sg" className={styles.contactButton}>
           ZHOU0729@e.ntu.edu.sg <span aria-hidden="true">↗</span>
